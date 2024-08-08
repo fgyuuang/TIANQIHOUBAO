@@ -5,19 +5,23 @@ import requests
 from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
-import csv
+
 import time
 import urllib
 from utils.fake_user_agent import get_fake_user_agent
 from utils.proxy import my_get_proxy
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='gbk')  # 改变标准输出的默认编码, 防止控制台打印乱码
 from datetime import datetime
-from config import AREAS
+from config import AREAS,TIME_OUT,POOL_NUMBER,IS_OVER
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import DrissionPage
+import logging
 now_year = datetime.now().year
 now_month = datetime.now().month
 page=DrissionPage.SessionPage()
+# 设置日志记录器
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 def DealsaveTocsv(df, fileName):
      '''
      将天气数据保存至csv文件
@@ -42,22 +46,20 @@ def DealsaveTocsv(df, fileName):
 
      df.to_csv(fileName, index=False, encoding='gbk')
 
-     print('Save all weather success!')
+     logger.info('Save all weather success!')
 
 
 def get_data(city,year,month):
-    url = 'http://www.tianqihoubao.com' + city + '/' + 'month' + '/' + str(year) + str(month) + '.html'
+    url = f'http://www.tianqihoubao.com{city}/month{year}{month}.html'
     while True:
         try:
-            # print('requesting...', url)
-            page.get(url,timeout=20, headers={'User-Agent': get_fake_user_agent('pc')})
+            page.get(url,timeout=TIME_OUT, headers={'User-Agent': get_fake_user_agent('pc')})
             r=page.html
             # r.raise_for_status()  # 若请求不成功,抛出HTTPError 异常
             # r.encoding = 'gbk'
-            print(f'{url}Request Success')
+            logger.info(f'{url}Request Success')
             soup = BeautifulSoup(r, 'lxml')
             all_weather = soup.find('div', class_="wdetail").find('table').find_all("tr")
-
             data = list()
             for tr in all_weather[1:]:
                 td_li = tr.find_all("td")
@@ -68,39 +70,56 @@ def get_data(city,year,month):
             res = np.array(data).reshape(-1, 4)
             result_weather = pd.DataFrame(res, columns=['日期', 'tq', 'temp', 'wind'])
             return result_weather
-        except:
-            print('error')
+        except requests.RequestException as e:
+            logger.error(f'HTTP 请求错误: {e},{url}')
+        except Exception as e:
+            logger.error(f'解析或数据处理错误: {e}')
 
 
 def get_city():
-    url='http://www.tianqihoubao.com/lishi/'
-    # print('Requesting...')
-    r = requests.get(url, timeout=30)
-    r.raise_for_status()  # 若请求不成功,抛出HTTPError 异常
-    r.encoding = 'gbk'
-    # print('Request Success')
-    soup = BeautifulSoup(r.text, 'lxml')
-    city_list= soup.find('div', class_="citychk").find_all('dl')
-    citydic={}
-    for dl in city_list:
-        province_text= dl.find('dt').find('a').get_text()
-        # print(province_text)
-        dd = dl.find('dd').find_all('a')
-        wherelist={}
-        for a in dd:
-            name = a.get_text()
-            # print(name)
-            url= a.get('href').split('.')[0]
-            wherelist[name]=url
-        citydic[province_text]=wherelist
-    return citydic
+    """
+    从天气网站获取城市列表，并将其整理成字典形式。
+
+    Returns:
+        dict: 包含省份及其城市的字典。
+    """
+    url = 'http://www.tianqihoubao.com/lishi/'
+    while True:
+        try:
+            # 发送 HTTP 请求获取网页内容
+            response = requests.get(url, timeout=TIME_OUT)
+            response.raise_for_status()  # 检查请求是否成功
+
+            # 解析网页内容
+            soup = BeautifulSoup(response.text, 'lxml')
+            city_list = soup.find('div', class_="citychk").find_all('dl')
+            citydic = {}
+
+            for dl in city_list:
+                province_text = dl.find('dt').find('a').get_text()
+                dd = dl.find('dd').find_all('a')
+                wherelist = {}
+                for a in dd:
+                    name = a.get_text()
+                    href = a.get('href')
+                    url = href.split('.')[0]
+                    wherelist[name] = url
+                citydic[province_text] = wherelist
+
+            return citydic
+
+        except requests.RequestException as e:
+            logger.error(f'HTTP 请求错误: {e}')
+        except Exception as e:
+            logger.error(f'解析错误: {e}')
 
 
 if __name__ == '__main__':
     year_list = list(range(2011, now_year + 1))
     month_list = list(range(1, 13))
     citydic = get_city()
-    threadPool = ThreadPoolExecutor(max_workers=5000)
+    logger.info(f'城市列表获取成功{citydic}')
+    threadPool = ThreadPoolExecutor(max_workers=POOL_NUMBER)
     thread_list = []
     for area in AREAS:
         filedic = area + '/'
@@ -108,16 +127,17 @@ if __name__ == '__main__':
             os.makedirs(filedic)
         for city,url in citydic[area].items():
             filename= filedic+city+'.csv'
-            citydata=pd.DataFrame()
-            for year in year_list:
-                 for month in month_list:
-                     if year == now_year and month > now_month:
-                         break
-                     month = str(month).zfill(2)
-                     thread = threadPool.submit(get_data,url,year,month)
-                     thread_list.append(thread)
-            for thread in as_completed(thread_list):
-                citydata =pd.concat([citydata,thread.result()],axis=0)
-            DealsaveTocsv(citydata,filename)
-    print('All Done')
+            if not os.path.exists(filename) or IS_OVER:
+                citydata=pd.DataFrame()
+                for year in year_list:
+                     for month in month_list:
+                         if year == now_year and month > now_month:
+                             break
+                         month = str(month).zfill(2)
+                         thread = threadPool.submit(get_data,url,year,month)
+                         thread_list.append(thread)
+                for thread in as_completed(thread_list):
+                    citydata =pd.concat([citydata,thread.result()],axis=0)
+                DealsaveTocsv(citydata,filename)
+    logger.info('All Done')
 
