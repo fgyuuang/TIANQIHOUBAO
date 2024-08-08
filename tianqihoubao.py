@@ -119,5 +119,5 @@ if __name__ == '__main__':
             for thread in as_completed(thread_list):
                 citydata =pd.concat([citydata,thread.result()],axis=0)
             DealsaveTocsv(citydata,filename)
-
+    print('All Done')
 
