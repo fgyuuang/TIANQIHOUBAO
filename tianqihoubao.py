@@ -5,11 +5,9 @@ import requests
 from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
-
-import time
-import urllib
-from utils.fake_user_agent import get_fake_user_agent
-from utils.proxy import my_get_proxy
+import pickle
+from get_city import get_city
+from fake_user_agent import get_fake_user_agent
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='gbk')  # 改变标准输出的默认编码, 防止控制台打印乱码
 from datetime import datetime
 from config import AREAS,TIME_OUT,POOL_NUMBER,IS_OVER
@@ -75,50 +73,16 @@ def get_data(city,year,month):
         except Exception as e:
             logger.error(f'解析或数据处理错误: {e}')
 
-
-def get_city():
-    """
-    从天气网站获取城市列表，并将其整理成字典形式。
-
-    Returns:
-        dict: 包含省份及其城市的字典。
-    """
-    url = 'http://www.tianqihoubao.com/lishi/'
-    while True:
-        try:
-            # 发送 HTTP 请求获取网页内容
-            response = requests.get(url, timeout=TIME_OUT)
-            response.raise_for_status()  # 检查请求是否成功
-
-            # 解析网页内容
-            soup = BeautifulSoup(response.text, 'lxml')
-            city_list = soup.find('div', class_="citychk").find_all('dl')
-            citydic = {}
-
-            for dl in city_list:
-                province_text = dl.find('dt').find('a').get_text()
-                dd = dl.find('dd').find_all('a')
-                wherelist = {}
-                for a in dd:
-                    name = a.get_text()
-                    href = a.get('href')
-                    url = href.split('.')[0]
-                    wherelist[name] = url
-                citydic[province_text] = wherelist
-
-            return citydic
-
-        except requests.RequestException as e:
-            logger.error(f'HTTP 请求错误: {e}')
-        except Exception as e:
-            logger.error(f'解析错误: {e}')
-
-
 if __name__ == '__main__':
+    starttime = datetime.now()
     year_list = list(range(2011, now_year + 1))
     month_list = list(range(1, 13))
-    citydic = get_city()
-    logger.info(f'城市列表获取成功{citydic}')
+    # 读取变量
+    if not os.path.exists('citydata.pkl'):
+        get_city()
+    with open('citydata.pkl', 'rb') as file:
+        citydic = pickle.load(file)
+    logger.info(f'城市列表读取成功{citydic}')
     threadPool = ThreadPoolExecutor(max_workers=POOL_NUMBER)
     thread_list = []
     for area in AREAS:
@@ -139,5 +103,8 @@ if __name__ == '__main__':
                 for thread in as_completed(thread_list):
                     citydata =pd.concat([citydata,thread.result()],axis=0)
                 DealsaveTocsv(citydata,filename)
-    logger.info('All Done')
+            else:
+                logger.info(f'{filename}exists')
+    endtime= datetime.now()
+    logger.info('All Done,time is %s' % (endtime - starttime))
 

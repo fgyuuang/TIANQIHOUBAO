@@ -11,7 +11,7 @@ IS_FAKE_USER_AGENT = True
 IS_VERIFY = False
 
 # 是否要覆盖已经保存的excel文件
-IS_OVER = True
+IS_OVER = False
 
 
 # 线程池数量
