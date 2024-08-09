@@ -27,8 +27,8 @@ from requests.packages.urllib3.util.retry import Retry
 
 # 创建一个适配器并设置更大的连接池大小
 adapter = HTTPAdapter(
-    pool_connections=50,  # 最大连接数
-    pool_maxsize=50,      # 最大连接池大小
+    pool_connections=7000,  # 最大连接数
+    pool_maxsize=7000,      # 最大连接池大小
     max_retries=Retry(total=3, backoff_factor=0.1)  # 设置重试机制
 )
 
@@ -106,41 +106,56 @@ def get_data(city,year,month):
                 a = li.s_eles('tag:td')
                 l = [i.text for i in a]
                 datarows.append(l)
+
             columns = datarows[0]
             # 提取数据行（剩余的元素）
             data_values = datarows[1:]
+            if data_values==[]:
+                return None
             # 创建DataFrame
             result_weather = pd.DataFrame(data_values, columns=columns)
+
             return result_weather
         except Exception as e:
             logger.error(f'解析或数据处理错误: {e},错误网址为{url}',)
 def do_craw(urlqueue:queue.Queue,parsequeue: queue.Queue):
     while True:
-        # logger.info(f'进程{threading.current_thread().name}开始')
-        url,year,month,filename = urlqueue.get()
-        # logger.info(f'进程{threading.current_thread().name}开始获得{url,month,year,filename}')
-        data=get_data(url,month,year)
-        parsequeue.put((data,filename))
-        logger.info(f'{threading.current_thread().name}爬取成功{url}crwal size:{urlqueue.qsize()}')
         if urlqueue.qsize() == 0:
             end_time=datetime.now()
             logger.info(f'urlqueue为空，关闭线程,用时{end_time-starttime}')
             return
+        # logger.info(f'进程{threading.current_thread().name}开始')
+        url,year,month,filename = urlqueue.get()
+        # logger.info(f'进程{threading.current_thread().name}开始获得{url,month,year,filename}')
+        data=get_data(url,month,year)
+        if data is None:
+            logger.error(f'爬取失败{url,year,month}也许无该数据!crwal size:{urlqueue.qsize()}')
+            continue
+        parsequeue.put((data,filename))
+        logger.info(f'{threading.current_thread().name}爬取成功{url,year,month}crwal size:{urlqueue.qsize()}')
+
 def do_save(parsequeue: queue.Queue,urlqueue:queue.Queue):
     while True:
-        data,filename = parsequeue.get()
-        DealsaveTocsv(data,filename)
+        data, filename = parsequeue.get()
+        try:
+            DealsaveTocsv(data,filename)
+        except Exception as e:
+           logger.error(f'保存错误{e}位置为{filename}')
         logger.info( f'{threading.current_thread().name} 保存成功{file} save size:{parsequeue.qsize()}')
         if parsequeue.qsize() == 0 and urlqueue.qsize() == 0:
             end_time=datetime.now()
             logger.info(f'urlqueue与parsequeue为空，关闭线程,用时{end_time-starttime}',)
             return
+def pool_mode():
+
+    pass
+def do_mode():
+    pass
 if __name__ == '__main__':
     year_list = list(range(2011, now_year + 1))
     month_list = list(range(1, 13))
     urlqueue = queue.Queue()
     parsequeue = queue.Queue()
-    # citydic = get_city()
     if not os.path.exists('citydata.json'):
         citydic = get_city()
         json_string = json.dumps(citydic, indent=4)
@@ -151,28 +166,24 @@ if __name__ == '__main__':
         logger.info('citydata.json exists')
         with open('citydata.json', 'r',encoding='utf-8') as file:
             citydic = json.load(file)
-    # logger.info(f'城市列表读取成功{citydic}')
     for area in AREAS:
         filedic = area + '/'
         if not os.path.exists(filedic):
             os.makedirs(filedic)
         for city,[url,realurl] in citydic[area].items():
             filename= filedic+city+'/'
-            if not os.path.exists(filename) or IS_OVER:
-                if not os.path.exists(filename):
-                    os.makedirs(filename)
-                for year in year_list:
-                     for month in month_list:
-                         if year == now_year and month > now_month:
-                             break
-                         month = str(month).zfill(2)
-                         name= filename+f'{year}{month}.csv'
+            if not os.path.exists(filename):
+                os.makedirs(filename)
+            for year in year_list:
+                 for month in month_list:
+                     if year == now_year and month > now_month:
+                         break
+                     month = str(month).zfill(2)
+                     name= filename+f'{year}{month}.csv'
+                     if not os.path.exists(name) or IS_OVER:
                          urlqueue.put((url,month,year,name))
-                         # logger.info(f'添加url:{(url,month,year,name)}到队列')
 
-            else:
-                logger.info(f'{filename}exists')
-
+                     # logger.info(f'添加url:{(url,month,year,name)}到队列')
     # print('开始爬取',urlqueue)
     for idx in range(DOWNLOAD_NUMBER):
         t = Thread(target=do_craw, args=(urlqueue, parsequeue), name=f'爬取线程{idx}')
