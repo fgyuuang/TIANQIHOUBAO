@@ -1,13 +1,8 @@
-import io
 import json
 import os
 import queue
-import sys
 import threading
 import pandas as pd
-import pickle
-import requests
-from bs4 import BeautifulSoup
 from fake_user_agent import get_fake_user_agent
 from datetime import datetime
 from config import AREAS,TIME_OUT,DOWNLOAD_NUMBER,SAVE_NUMBER,IS_OVER
