@@ -50,5 +50,6 @@ if __name__ == '__main__':
         data = get_city()
         with open('citydata.pkl', 'wb') as file:
             pickle.dump(data, file)
+        print(data)
 
 

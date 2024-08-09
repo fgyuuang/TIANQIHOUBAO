@@ -15,7 +15,8 @@ IS_OVER = False
 
 
 # 线程池数量
-POOL_NUMBER = 50
+DOWNLOAD_NUMBER = 5000
+SAVE_NUMBER=100
 
 # 请求超时时间
 TIME_OUT = 20
