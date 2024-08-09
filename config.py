@@ -1,4 +1,4 @@
-# 爬取指定身份内的所有地区景点的评论数据
+# 爬取指定省份内的所有地区
 AREAS = ['海南']
 
 # 是否启动代理
@@ -10,7 +10,7 @@ IS_FAKE_USER_AGENT = True
 # 是否启动验证ssl
 IS_VERIFY = False
 
-# 是否要覆盖已经保存的excel文件
+# 是否要覆盖已经保存的文件
 IS_OVER = False
 
 
