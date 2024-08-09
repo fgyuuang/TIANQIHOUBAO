@@ -11,12 +11,12 @@ IS_FAKE_USER_AGENT = True
 IS_VERIFY = False
 
 # 是否要覆盖已经保存的文件
-IS_OVER = False
+IS_OVER = True
 
 
 # 线程池数量
-DOWNLOAD_NUMBER = 5000
-SAVE_NUMBER=100
+DOWNLOAD_NUMBER=30
+SAVE_NUMBER=5
 
 # 请求超时时间
 TIME_OUT = 20

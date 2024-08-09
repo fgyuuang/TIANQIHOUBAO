@@ -1,0 +1,1522 @@
+{
+    "北京": {
+        "北京": [
+            "beijing",
+            "http://www.tianqihoubao.com/lishi/beijing.html"
+        ]
+    },
+    "天津": {
+        "天津": [
+            "tianjin",
+            "http://www.tianqihoubao.com/lishi/tianjin.html"
+        ]
+    },
+    "河北": {
+        "石家庄": [
+            "shijiazhuang",
+            "http://www.tianqihoubao.com/lishi/shijiazhuang.html"
+        ],
+        "唐山": [
+            "tangshan",
+            "http://www.tianqihoubao.com/lishi/tangshan.html"
+        ],
+        "秦皇岛": [
+            "qinhuangdao",
+            "http://www.tianqihoubao.com/lishi/qinhuangdao.html"
+        ],
+        "邯郸": [
+            "handan",
+            "http://www.tianqihoubao.com/lishi/handan.html"
+        ],
+        "邢台": [
+            "xingtai",
+            "http://www.tianqihoubao.com/lishi/xingtai.html"
+        ],
+        "保定": [
+            "baoding",
+            "http://www.tianqihoubao.com/lishi/baoding.html"
+        ],
+        "张家口": [
+            "zhangjiakou",
+            "http://www.tianqihoubao.com/lishi/zhangjiakou.html"
+        ],
+        "承德": [
+            "chengde",
+            "http://www.tianqihoubao.com/lishi/chengde.html"
+        ],
+        "沧州": [
+            "cangzhou",
+            "http://www.tianqihoubao.com/lishi/cangzhou.html"
+        ],
+        "廊坊": [
+            "langfang",
+            "http://www.tianqihoubao.com/lishi/langfang.html"
+        ],
+        "衡水": [
+            "hengshui",
+            "http://www.tianqihoubao.com/lishi/hengshui.html"
+        ]
+    },
+    "山西": {
+        "太原": [
+            "taiyuan",
+            "http://www.tianqihoubao.com/lishi/taiyuan.html"
+        ],
+        "大同": [
+            "datong",
+            "http://www.tianqihoubao.com/lishi/datong.html"
+        ],
+        "阳泉": [
+            "yangquan",
+            "http://www.tianqihoubao.com/lishi/yangquan.html"
+        ],
+        "长治": [
+            "changzhi",
+            "http://www.tianqihoubao.com/lishi/changzhi.html"
+        ],
+        "晋城": [
+            "jincheng",
+            "http://www.tianqihoubao.com/lishi/jincheng.html"
+        ],
+        "朔州": [
+            "shuozhou",
+            "http://www.tianqihoubao.com/lishi/shuozhou.html"
+        ],
+        "晋中": [
+            "jinzhong",
+            "http://www.tianqihoubao.com/lishi/jinzhong.html"
+        ],
+        "运城": [
+            "sxyuncheng",
+            "http://www.tianqihoubao.com/lishi/sxyuncheng.html"
+        ],
+        "忻州": [
+            "xinzhou",
+            "http://www.tianqihoubao.com/lishi/xinzhou.html"
+        ],
+        "临汾": [
+            "linfen",
+            "http://www.tianqihoubao.com/lishi/linfen.html"
+        ],
+        "吕梁": [
+            "lvliang",
+            "http://www.tianqihoubao.com/lishi/lvliang.html"
+        ]
+    },
+    "内蒙古": {
+        "呼和浩特": [
+            "huhehaote",
+            "http://www.tianqihoubao.com/lishi/huhehaote.html"
+        ],
+        "包头": [
+            "baotou",
+            "http://www.tianqihoubao.com/lishi/baotou.html"
+        ],
+        "乌海": [
+            "wuhai",
+            "http://www.tianqihoubao.com/lishi/wuhai.html"
+        ],
+        "赤峰": [
+            "chifeng",
+            "http://www.tianqihoubao.com/lishi/chifeng.html"
+        ],
+        "通辽": [
+            "tongliao",
+            "http://www.tianqihoubao.com/lishi/tongliao.html"
+        ],
+        "鄂尔多斯": [
+            "eerduosi",
+            "http://www.tianqihoubao.com/lishi/eerduosi.html"
+        ],
+        "呼伦贝尔": [
+            "hulunbeier",
+            "http://www.tianqihoubao.com/lishi/hulunbeier.html"
+        ],
+        "巴彦淖尔": [
+            "bayannaoer",
+            "http://www.tianqihoubao.com/lishi/bayannaoer.html"
+        ],
+        "乌兰察布": [
+            "wulanchabu",
+            "http://www.tianqihoubao.com/lishi/wulanchabu.html"
+        ],
+        "兴安盟": [
+            "xinganmeng",
+            "http://www.tianqihoubao.com/lishi/xinganmeng.html"
+        ],
+        "锡林郭勒": [
+            "xilinguole",
+            "http://www.tianqihoubao.com/lishi/xilinguole.html"
+        ],
+        "阿拉善盟": [
+            "alashanmeng",
+            "http://www.tianqihoubao.com/lishi/alashanmeng.html"
+        ]
+    },
+    "辽宁": {
+        "沈阳": [
+            "shenyang",
+            "http://www.tianqihoubao.com/lishi/shenyang.html"
+        ],
+        "大连": [
+            "dalian",
+            "http://www.tianqihoubao.com/lishi/dalian.html"
+        ],
+        "鞍山": [
+            "anshan",
+            "http://www.tianqihoubao.com/lishi/anshan.html"
+        ],
+        "抚顺": [
+            "fushun",
+            "http://www.tianqihoubao.com/lishi/fushun.html"
+        ],
+        "本溪": [
+            "benxi",
+            "http://www.tianqihoubao.com/lishi/benxi.html"
+        ],
+        "丹东": [
+            "dandong",
+            "http://www.tianqihoubao.com/lishi/dandong.html"
+        ],
+        "锦州": [
+            "jinzhou",
+            "http://www.tianqihoubao.com/lishi/jinzhou.html"
+        ],
+        "营口": [
+            "yingkou",
+            "http://www.tianqihoubao.com/lishi/yingkou.html"
+        ],
+        "阜新": [
+            "fuxin",
+            "http://www.tianqihoubao.com/lishi/fuxin.html"
+        ],
+        "辽阳": [
+            "liaoyang",
+            "http://www.tianqihoubao.com/lishi/liaoyang.html"
+        ],
+        "盘锦": [
+            "panjin",
+            "http://www.tianqihoubao.com/lishi/panjin.html"
+        ],
+        "昌图": [
+            "changtu",
+            "http://www.tianqihoubao.com/lishi/changtu.html"
+        ],
+        "朝阳": [
+            "chaoyang",
+            "http://www.tianqihoubao.com/lishi/chaoyang.html"
+        ],
+        "葫芦岛": [
+            "huludao",
+            "http://www.tianqihoubao.com/lishi/huludao.html"
+        ]
+    },
+    "吉林": {
+        "长春": [
+            "changchun",
+            "http://www.tianqihoubao.com/lishi/changchun.html"
+        ],
+        "吉林": [
+            "jilin",
+            "http://www.tianqihoubao.com/lishi/jilin.html"
+        ],
+        "四平": [
+            "siping",
+            "http://www.tianqihoubao.com/lishi/siping.html"
+        ],
+        "辽源": [
+            "liaoyuan",
+            "http://www.tianqihoubao.com/lishi/liaoyuan.html"
+        ],
+        "通化": [
+            "tonghua",
+            "http://www.tianqihoubao.com/lishi/tonghua.html"
+        ],
+        "白山": [
+            "baishan",
+            "http://www.tianqihoubao.com/lishi/baishan.html"
+        ],
+        "松原": [
+            "songyuan",
+            "http://www.tianqihoubao.com/lishi/songyuan.html"
+        ],
+        "白城": [
+            "baicheng",
+            "http://www.tianqihoubao.com/lishi/baicheng.html"
+        ],
+        "延边": [
+            "yanbian",
+            "http://www.tianqihoubao.com/lishi/yanbian.html"
+        ]
+    },
+    "黑龙江": {
+        "哈尔滨": [
+            "haerbin",
+            "http://www.tianqihoubao.com/lishi/haerbin.html"
+        ],
+        "齐齐哈尔": [
+            "qiqihaer",
+            "http://www.tianqihoubao.com/lishi/qiqihaer.html"
+        ],
+        "鸡西": [
+            "jixi",
+            "http://www.tianqihoubao.com/lishi/jixi.html"
+        ],
+        "鹤岗": [
+            "hegang",
+            "http://www.tianqihoubao.com/lishi/hegang.html"
+        ],
+        "双鸭山": [
+            "shuangyashan",
+            "http://www.tianqihoubao.com/lishi/shuangyashan.html"
+        ],
+        "大庆": [
+            "daqing",
+            "http://www.tianqihoubao.com/lishi/daqing.html"
+        ],
+        "伊春": [
+            "yichun",
+            "http://www.tianqihoubao.com/lishi/yichun.html"
+        ],
+        "佳木斯": [
+            "jiamusi",
+            "http://www.tianqihoubao.com/lishi/jiamusi.html"
+        ],
+        "七台河": [
+            "qitaihe",
+            "http://www.tianqihoubao.com/lishi/qitaihe.html"
+        ],
+        "牡丹江": [
+            "mudanjiang",
+            "http://www.tianqihoubao.com/lishi/mudanjiang.html"
+        ],
+        "黑河": [
+            "heihe",
+            "http://www.tianqihoubao.com/lishi/heihe.html"
+        ],
+        "绥化": [
+            "suihua",
+            "http://www.tianqihoubao.com/lishi/suihua.html"
+        ],
+        "大兴安岭": [
+            "daxinganling",
+            "http://www.tianqihoubao.com/lishi/daxinganling.html"
+        ]
+    },
+    "上海": {
+        "上海": [
+            "shanghai",
+            "http://www.tianqihoubao.com/lishi/shanghai.html"
+        ]
+    },
+    "江苏": {
+        "南京": [
+            "nanjing",
+            "http://www.tianqihoubao.com/lishi/nanjing.html"
+        ],
+        "无锡": [
+            "wuxi",
+            "http://www.tianqihoubao.com/lishi/wuxi.html"
+        ],
+        "徐州": [
+            "xuzhou",
+            "http://www.tianqihoubao.com/lishi/xuzhou.html"
+        ],
+        "常州": [
+            "changzhou",
+            "http://www.tianqihoubao.com/lishi/changzhou.html"
+        ],
+        "苏州": [
+            "suzhou",
+            "http://www.tianqihoubao.com/lishi/suzhou.html"
+        ],
+        "南通": [
+            "nantong",
+            "http://www.tianqihoubao.com/lishi/nantong.html"
+        ],
+        "连云港": [
+            "lianyungang",
+            "http://www.tianqihoubao.com/lishi/lianyungang.html"
+        ],
+        "淮安": [
+            "huaian",
+            "http://www.tianqihoubao.com/lishi/huaian.html"
+        ],
+        "盐城": [
+            "yancheng",
+            "http://www.tianqihoubao.com/lishi/yancheng.html"
+        ],
+        "扬州": [
+            "yangzhou",
+            "http://www.tianqihoubao.com/lishi/yangzhou.html"
+        ],
+        "镇江": [
+            "zhenjiang",
+            "http://www.tianqihoubao.com/lishi/zhenjiang.html"
+        ],
+        "泰州": [
+            "jstaizhou",
+            "http://www.tianqihoubao.com/lishi/jstaizhou.html"
+        ],
+        "宿迁": [
+            "suqian",
+            "http://www.tianqihoubao.com/lishi/suqian.html"
+        ]
+    },
+    "浙江": {
+        "杭州": [
+            "hangzhou",
+            "http://www.tianqihoubao.com/lishi/hangzhou.html"
+        ],
+        "宁波": [
+            "ningbo",
+            "http://www.tianqihoubao.com/lishi/ningbo.html"
+        ],
+        "温州": [
+            "wenzhou",
+            "http://www.tianqihoubao.com/lishi/wenzhou.html"
+        ],
+        "嘉兴": [
+            "jiaxing",
+            "http://www.tianqihoubao.com/lishi/jiaxing.html"
+        ],
+        "湖州": [
+            "huzhou",
+            "http://www.tianqihoubao.com/lishi/huzhou.html"
+        ],
+        "绍兴": [
+            "shaoxing",
+            "http://www.tianqihoubao.com/lishi/shaoxing.html"
+        ],
+        "金华": [
+            "jinhua",
+            "http://www.tianqihoubao.com/lishi/jinhua.html"
+        ],
+        "衢州": [
+            "quzhou",
+            "http://www.tianqihoubao.com/lishi/quzhou.html"
+        ],
+        "舟山": [
+            "zhoushan",
+            "http://www.tianqihoubao.com/lishi/zhoushan.html"
+        ],
+        "台州": [
+            "taizhou",
+            "http://www.tianqihoubao.com/lishi/taizhou.html"
+        ],
+        "丽水": [
+            "lishui",
+            "http://www.tianqihoubao.com/lishi/lishui.html"
+        ]
+    },
+    "安徽": {
+        "合肥": [
+            "hefei",
+            "http://www.tianqihoubao.com/lishi/hefei.html"
+        ],
+        "芜湖": [
+            "wuhu",
+            "http://www.tianqihoubao.com/lishi/wuhu.html"
+        ],
+        "蚌埠": [
+            "bangbu",
+            "http://www.tianqihoubao.com/lishi/bangbu.html"
+        ],
+        "淮南": [
+            "huainan",
+            "http://www.tianqihoubao.com/lishi/huainan.html"
+        ],
+        "马鞍山": [
+            "maanshan",
+            "http://www.tianqihoubao.com/lishi/maanshan.html"
+        ],
+        "淮北": [
+            "huaibei",
+            "http://www.tianqihoubao.com/lishi/huaibei.html"
+        ],
+        "铜陵": [
+            "tongling",
+            "http://www.tianqihoubao.com/lishi/tongling.html"
+        ],
+        "安庆": [
+            "anqing",
+            "http://www.tianqihoubao.com/lishi/anqing.html"
+        ],
+        "黄山": [
+            "huangshan",
+            "http://www.tianqihoubao.com/lishi/huangshan.html"
+        ],
+        "滁州": [
+            "chuzhou",
+            "http://www.tianqihoubao.com/lishi/chuzhou.html"
+        ],
+        "阜阳": [
+            "fuyang",
+            "http://www.tianqihoubao.com/lishi/fuyang.html"
+        ],
+        "宿州": [
+            "anhuisuzhou",
+            "http://www.tianqihoubao.com/lishi/anhuisuzhou.html"
+        ],
+        "巢湖": [
+            "chaohu",
+            "http://www.tianqihoubao.com/lishi/chaohu.html"
+        ],
+        "六安": [
+            "liuan",
+            "http://www.tianqihoubao.com/lishi/liuan.html"
+        ],
+        "亳州": [
+            "bozhou",
+            "http://www.tianqihoubao.com/lishi/bozhou.html"
+        ],
+        "池州": [
+            "chizhou",
+            "http://www.tianqihoubao.com/lishi/chizhou.html"
+        ],
+        "宣城": [
+            "xuancheng",
+            "http://www.tianqihoubao.com/lishi/xuancheng.html"
+        ]
+    },
+    "福建": {
+        "福州": [
+            "fujianfuzhou",
+            "http://www.tianqihoubao.com/lishi/fujianfuzhou.html"
+        ],
+        "厦门": [
+            "xiamen",
+            "http://www.tianqihoubao.com/lishi/xiamen.html"
+        ],
+        "莆田": [
+            "putian",
+            "http://www.tianqihoubao.com/lishi/putian.html"
+        ],
+        "三明": [
+            "sanming",
+            "http://www.tianqihoubao.com/lishi/sanming.html"
+        ],
+        "泉州": [
+            "quanzhou",
+            "http://www.tianqihoubao.com/lishi/quanzhou.html"
+        ],
+        "漳州": [
+            "zhangzhou",
+            "http://www.tianqihoubao.com/lishi/zhangzhou.html"
+        ],
+        "南平": [
+            "nanping",
+            "http://www.tianqihoubao.com/lishi/nanping.html"
+        ],
+        "龙岩": [
+            "longyan",
+            "http://www.tianqihoubao.com/lishi/longyan.html"
+        ],
+        "宁德": [
+            "ningde",
+            "http://www.tianqihoubao.com/lishi/ningde.html"
+        ]
+    },
+    "江西": {
+        "南昌": [
+            "nanchang",
+            "http://www.tianqihoubao.com/lishi/nanchang.html"
+        ],
+        "景德镇": [
+            "jingdezhen",
+            "http://www.tianqihoubao.com/lishi/jingdezhen.html"
+        ],
+        "萍乡": [
+            "pingxiang",
+            "http://www.tianqihoubao.com/lishi/pingxiang.html"
+        ],
+        "九江": [
+            "jiujiang",
+            "http://www.tianqihoubao.com/lishi/jiujiang.html"
+        ],
+        "新余": [
+            "xinyu",
+            "http://www.tianqihoubao.com/lishi/xinyu.html"
+        ],
+        "鹰潭": [
+            "yingtan",
+            "http://www.tianqihoubao.com/lishi/yingtan.html"
+        ],
+        "赣州": [
+            "ganzhou",
+            "http://www.tianqihoubao.com/lishi/ganzhou.html"
+        ],
+        "吉安": [
+            "jian",
+            "http://www.tianqihoubao.com/lishi/jian.html"
+        ],
+        "宜春": [
+            "jxyichun",
+            "http://www.tianqihoubao.com/lishi/jxyichun.html"
+        ],
+        "抚州": [
+            "fuzhou",
+            "http://www.tianqihoubao.com/lishi/fuzhou.html"
+        ],
+        "上饶": [
+            "shangrao",
+            "http://www.tianqihoubao.com/lishi/shangrao.html"
+        ]
+    },
+    "山东": {
+        "济南": [
+            "jinan",
+            "http://www.tianqihoubao.com/lishi/jinan.html"
+        ],
+        "青岛": [
+            "qingdao",
+            "http://www.tianqihoubao.com/lishi/qingdao.html"
+        ],
+        "淄博": [
+            "zibo",
+            "http://www.tianqihoubao.com/lishi/zibo.html"
+        ],
+        "枣庄": [
+            "zaozhuang",
+            "http://www.tianqihoubao.com/lishi/zaozhuang.html"
+        ],
+        "东营": [
+            "dongying",
+            "http://www.tianqihoubao.com/lishi/dongying.html"
+        ],
+        "烟台": [
+            "yantai",
+            "http://www.tianqihoubao.com/lishi/yantai.html"
+        ],
+        "潍坊": [
+            "weifang",
+            "http://www.tianqihoubao.com/lishi/weifang.html"
+        ],
+        "济宁": [
+            "sdjining",
+            "http://www.tianqihoubao.com/lishi/sdjining.html"
+        ],
+        "泰安": [
+            "taian",
+            "http://www.tianqihoubao.com/lishi/taian.html"
+        ],
+        "威海": [
+            "weihai",
+            "http://www.tianqihoubao.com/lishi/weihai.html"
+        ],
+        "日照": [
+            "rizhao",
+            "http://www.tianqihoubao.com/lishi/rizhao.html"
+        ],
+        "莱芜": [
+            "laiwu",
+            "http://www.tianqihoubao.com/lishi/laiwu.html"
+        ],
+        "临沂": [
+            "linyi",
+            "http://www.tianqihoubao.com/lishi/linyi.html"
+        ],
+        "德州": [
+            "dezhou",
+            "http://www.tianqihoubao.com/lishi/dezhou.html"
+        ],
+        "聊城": [
+            "liaocheng",
+            "http://www.tianqihoubao.com/lishi/liaocheng.html"
+        ],
+        "滨州": [
+            "binzhou",
+            "http://www.tianqihoubao.com/lishi/binzhou.html"
+        ],
+        "菏泽": [
+            "heze",
+            "http://www.tianqihoubao.com/lishi/heze.html"
+        ]
+    },
+    "河南": {
+        "郑州": [
+            "zhengzhou",
+            "http://www.tianqihoubao.com/lishi/zhengzhou.html"
+        ],
+        "开封": [
+            "kaifeng",
+            "http://www.tianqihoubao.com/lishi/kaifeng.html"
+        ],
+        "洛阳": [
+            "lvyang",
+            "http://www.tianqihoubao.com/lishi/lvyang.html"
+        ],
+        "平顶山": [
+            "pingdingshan",
+            "http://www.tianqihoubao.com/lishi/pingdingshan.html"
+        ],
+        "安阳": [
+            "anyang",
+            "http://www.tianqihoubao.com/lishi/anyang.html"
+        ],
+        "鹤壁": [
+            "hebi",
+            "http://www.tianqihoubao.com/lishi/hebi.html"
+        ],
+        "新乡": [
+            "xinxiang",
+            "http://www.tianqihoubao.com/lishi/xinxiang.html"
+        ],
+        "焦作": [
+            "jiaozuo",
+            "http://www.tianqihoubao.com/lishi/jiaozuo.html"
+        ],
+        "濮阳": [
+            "puyang",
+            "http://www.tianqihoubao.com/lishi/puyang.html"
+        ],
+        "许昌": [
+            "xuchang",
+            "http://www.tianqihoubao.com/lishi/xuchang.html"
+        ],
+        "漯河": [
+            "luohe",
+            "http://www.tianqihoubao.com/lishi/luohe.html"
+        ],
+        "三门峡": [
+            "sanmenxia",
+            "http://www.tianqihoubao.com/lishi/sanmenxia.html"
+        ],
+        "南阳": [
+            "nanyang",
+            "http://www.tianqihoubao.com/lishi/nanyang.html"
+        ],
+        "商丘": [
+            "shangqiu",
+            "http://www.tianqihoubao.com/lishi/shangqiu.html"
+        ],
+        "信阳": [
+            "xinyang",
+            "http://www.tianqihoubao.com/lishi/xinyang.html"
+        ],
+        "周口": [
+            "zhoukou",
+            "http://www.tianqihoubao.com/lishi/zhoukou.html"
+        ],
+        "驻马店": [
+            "zhumadian",
+            "http://www.tianqihoubao.com/lishi/zhumadian.html"
+        ]
+    },
+    "湖北": {
+        "武汉": [
+            "wuhan",
+            "http://www.tianqihoubao.com/lishi/wuhan.html"
+        ],
+        "黄石": [
+            "huangshi",
+            "http://www.tianqihoubao.com/lishi/huangshi.html"
+        ],
+        "十堰": [
+            "shiyan",
+            "http://www.tianqihoubao.com/lishi/shiyan.html"
+        ],
+        "宜昌": [
+            "yichang",
+            "http://www.tianqihoubao.com/lishi/yichang.html"
+        ],
+        "襄阳": [
+            "xiangyang",
+            "http://www.tianqihoubao.com/lishi/xiangyang.html"
+        ],
+        "鄂州": [
+            "ezhou",
+            "http://www.tianqihoubao.com/lishi/ezhou.html"
+        ],
+        "荆门": [
+            "jingmen",
+            "http://www.tianqihoubao.com/lishi/jingmen.html"
+        ],
+        "孝感": [
+            "xiaogan",
+            "http://www.tianqihoubao.com/lishi/xiaogan.html"
+        ],
+        "荆州": [
+            "jingzhou",
+            "http://www.tianqihoubao.com/lishi/jingzhou.html"
+        ],
+        "黄冈": [
+            "huanggang",
+            "http://www.tianqihoubao.com/lishi/huanggang.html"
+        ],
+        "咸宁": [
+            "xianning",
+            "http://www.tianqihoubao.com/lishi/xianning.html"
+        ],
+        "随州": [
+            "suizhou",
+            "http://www.tianqihoubao.com/lishi/suizhou.html"
+        ],
+        "恩施": [
+            "enshi",
+            "http://www.tianqihoubao.com/lishi/enshi.html"
+        ],
+        "仙桃": [
+            "xiantao",
+            "http://www.tianqihoubao.com/lishi/xiantao.html"
+        ],
+        "潜江": [
+            "qianjiang",
+            "http://www.tianqihoubao.com/lishi/qianjiang.html"
+        ],
+        "天门": [
+            "tianmen",
+            "http://www.tianqihoubao.com/lishi/tianmen.html"
+        ],
+        "神农架": [
+            "shennongjia",
+            "http://www.tianqihoubao.com/lishi/shennongjia.html"
+        ]
+    },
+    "湖南": {
+        "长沙": [
+            "changsha",
+            "http://www.tianqihoubao.com/lishi/changsha.html"
+        ],
+        "株洲": [
+            "zhuzhou",
+            "http://www.tianqihoubao.com/lishi/zhuzhou.html"
+        ],
+        "湘潭": [
+            "xiangtan",
+            "http://www.tianqihoubao.com/lishi/xiangtan.html"
+        ],
+        "衡阳": [
+            "hengyang",
+            "http://www.tianqihoubao.com/lishi/hengyang.html"
+        ],
+        "邵阳": [
+            "shaoyang",
+            "http://www.tianqihoubao.com/lishi/shaoyang.html"
+        ],
+        "岳阳": [
+            "yueyang",
+            "http://www.tianqihoubao.com/lishi/yueyang.html"
+        ],
+        "常德": [
+            "changde",
+            "http://www.tianqihoubao.com/lishi/changde.html"
+        ],
+        "张家界": [
+            "zhangjiajie",
+            "http://www.tianqihoubao.com/lishi/zhangjiajie.html"
+        ],
+        "益阳": [
+            "yiyang",
+            "http://www.tianqihoubao.com/lishi/yiyang.html"
+        ],
+        "郴州": [
+            "chenzhou",
+            "http://www.tianqihoubao.com/lishi/chenzhou.html"
+        ],
+        "永州": [
+            "yongzhou",
+            "http://www.tianqihoubao.com/lishi/yongzhou.html"
+        ],
+        "怀化": [
+            "huaihua",
+            "http://www.tianqihoubao.com/lishi/huaihua.html"
+        ],
+        "娄底": [
+            "loudi",
+            "http://www.tianqihoubao.com/lishi/loudi.html"
+        ],
+        "湘西": [
+            "xiangxi",
+            "http://www.tianqihoubao.com/lishi/xiangxi.html"
+        ]
+    },
+    "广东": {
+        "广州": [
+            "guangzhou",
+            "http://www.tianqihoubao.com/lishi/guangzhou.html"
+        ],
+        "韶关": [
+            "shaoguan",
+            "http://www.tianqihoubao.com/lishi/shaoguan.html"
+        ],
+        "深圳": [
+            "shenzhen",
+            "http://www.tianqihoubao.com/lishi/shenzhen.html"
+        ],
+        "珠海": [
+            "zhuhai",
+            "http://www.tianqihoubao.com/lishi/zhuhai.html"
+        ],
+        "汕头": [
+            "shantou",
+            "http://www.tianqihoubao.com/lishi/shantou.html"
+        ],
+        "佛山": [
+            "foshan",
+            "http://www.tianqihoubao.com/lishi/foshan.html"
+        ],
+        "江门": [
+            "jiangmen",
+            "http://www.tianqihoubao.com/lishi/jiangmen.html"
+        ],
+        "湛江": [
+            "zhanjiang",
+            "http://www.tianqihoubao.com/lishi/zhanjiang.html"
+        ],
+        "茂名": [
+            "maoming",
+            "http://www.tianqihoubao.com/lishi/maoming.html"
+        ],
+        "肇庆": [
+            "zhaoqing",
+            "http://www.tianqihoubao.com/lishi/zhaoqing.html"
+        ],
+        "惠州": [
+            "huizhou",
+            "http://www.tianqihoubao.com/lishi/huizhou.html"
+        ],
+        "梅州": [
+            "meizhou",
+            "http://www.tianqihoubao.com/lishi/meizhou.html"
+        ],
+        "汕尾": [
+            "shanwei",
+            "http://www.tianqihoubao.com/lishi/shanwei.html"
+        ],
+        "河源": [
+            "heyuan",
+            "http://www.tianqihoubao.com/lishi/heyuan.html"
+        ],
+        "阳江": [
+            "yangjiang",
+            "http://www.tianqihoubao.com/lishi/yangjiang.html"
+        ],
+        "清远": [
+            "gdqingyuan",
+            "http://www.tianqihoubao.com/lishi/gdqingyuan.html"
+        ],
+        "东莞": [
+            "dongguang",
+            "http://www.tianqihoubao.com/lishi/dongguang.html"
+        ],
+        "中山": [
+            "zhongshan",
+            "http://www.tianqihoubao.com/lishi/zhongshan.html"
+        ],
+        "潮州": [
+            "chaozhou",
+            "http://www.tianqihoubao.com/lishi/chaozhou.html"
+        ],
+        "揭阳": [
+            "jieyang",
+            "http://www.tianqihoubao.com/lishi/jieyang.html"
+        ],
+        "云浮": [
+            "yunfu",
+            "http://www.tianqihoubao.com/lishi/yunfu.html"
+        ]
+    },
+    "广西": {
+        "南宁": [
+            "nanning",
+            "http://www.tianqihoubao.com/lishi/nanning.html"
+        ],
+        "柳州": [
+            "liuzhou",
+            "http://www.tianqihoubao.com/lishi/liuzhou.html"
+        ],
+        "桂林": [
+            "guilin",
+            "http://www.tianqihoubao.com/lishi/guilin.html"
+        ],
+        "梧州": [
+            "wuzhou",
+            "http://www.tianqihoubao.com/lishi/wuzhou.html"
+        ],
+        "北海": [
+            "beihai",
+            "http://www.tianqihoubao.com/lishi/beihai.html"
+        ],
+        "防城港": [
+            "fangchenggang",
+            "http://www.tianqihoubao.com/lishi/fangchenggang.html"
+        ],
+        "钦州": [
+            "gxqinzhou",
+            "http://www.tianqihoubao.com/lishi/gxqinzhou.html"
+        ],
+        "贵港": [
+            "guigang",
+            "http://www.tianqihoubao.com/lishi/guigang.html"
+        ],
+        "玉林": [
+            "guangxiyulin",
+            "http://www.tianqihoubao.com/lishi/guangxiyulin.html"
+        ],
+        "百色": [
+            "baise",
+            "http://www.tianqihoubao.com/lishi/baise.html"
+        ],
+        "贺州": [
+            "hezhou",
+            "http://www.tianqihoubao.com/lishi/hezhou.html"
+        ],
+        "河池": [
+            "hechi",
+            "http://www.tianqihoubao.com/lishi/hechi.html"
+        ],
+        "来宾": [
+            "laibin",
+            "http://www.tianqihoubao.com/lishi/laibin.html"
+        ],
+        "崇左": [
+            "chongzuo",
+            "http://www.tianqihoubao.com/lishi/chongzuo.html"
+        ]
+    },
+    "海南": {
+        "海口": [
+            "haikou",
+            "http://www.tianqihoubao.com/lishi/haikou.html"
+        ],
+        "三亚": [
+            "sanya",
+            "http://www.tianqihoubao.com/lishi/sanya.html"
+        ],
+        "五指山": [
+            "wuzhishan",
+            "http://www.tianqihoubao.com/lishi/wuzhishan.html"
+        ],
+        "琼海": [
+            "qionghai",
+            "http://www.tianqihoubao.com/lishi/qionghai.html"
+        ],
+        "儋州": [
+            "danzhou",
+            "http://www.tianqihoubao.com/lishi/danzhou.html"
+        ],
+        "文昌": [
+            "wenchang",
+            "http://www.tianqihoubao.com/lishi/wenchang.html"
+        ],
+        "万宁": [
+            "wanning",
+            "http://www.tianqihoubao.com/lishi/wanning.html"
+        ],
+        "东方": [
+            "dongfang",
+            "http://www.tianqihoubao.com/lishi/dongfang.html"
+        ],
+        "定安": [
+            "dingan",
+            "http://www.tianqihoubao.com/lishi/dingan.html"
+        ],
+        "屯昌": [
+            "tunchang",
+            "http://www.tianqihoubao.com/lishi/tunchang.html"
+        ],
+        "澄迈": [
+            "chengmai",
+            "http://www.tianqihoubao.com/lishi/chengmai.html"
+        ],
+        "临高": [
+            "lingao",
+            "http://www.tianqihoubao.com/lishi/lingao.html"
+        ],
+        "白沙": [
+            "baisha",
+            "http://www.tianqihoubao.com/lishi/baisha.html"
+        ],
+        "昌江": [
+            "changjiang",
+            "http://www.tianqihoubao.com/lishi/changjiang.html"
+        ],
+        "陵水": [
+            "lingshui",
+            "http://www.tianqihoubao.com/lishi/lingshui.html"
+        ],
+        "西沙群岛": [
+            "xishaqundao",
+            "http://www.tianqihoubao.com/lishi/xishaqundao.html"
+        ],
+        "南沙群岛": [
+            "nanshaqundao",
+            "http://www.tianqihoubao.com/lishi/nanshaqundao.html"
+        ]
+    },
+    "重庆": {
+        "重庆": [
+            "chongqing",
+            "http://www.tianqihoubao.com/lishi/chongqing.html"
+        ]
+    },
+    "四川": {
+        "成都": [
+            "chengdu",
+            "http://www.tianqihoubao.com/lishi/chengdu.html"
+        ],
+        "自贡": [
+            "zigong",
+            "http://www.tianqihoubao.com/lishi/zigong.html"
+        ],
+        "攀枝花": [
+            "panzhihua",
+            "http://www.tianqihoubao.com/lishi/panzhihua.html"
+        ],
+        "泸州": [
+            "luzhou",
+            "http://www.tianqihoubao.com/lishi/luzhou.html"
+        ],
+        "德阳": [
+            "deyang",
+            "http://www.tianqihoubao.com/lishi/deyang.html"
+        ],
+        "绵阳": [
+            "mianyang",
+            "http://www.tianqihoubao.com/lishi/mianyang.html"
+        ],
+        "广元": [
+            "guangyuan",
+            "http://www.tianqihoubao.com/lishi/guangyuan.html"
+        ],
+        "遂宁": [
+            "scsuining",
+            "http://www.tianqihoubao.com/lishi/scsuining.html"
+        ],
+        "内江": [
+            "neijiang",
+            "http://www.tianqihoubao.com/lishi/neijiang.html"
+        ],
+        "乐山": [
+            "leshan",
+            "http://www.tianqihoubao.com/lishi/leshan.html"
+        ],
+        "南充": [
+            "nanchong",
+            "http://www.tianqihoubao.com/lishi/nanchong.html"
+        ],
+        "眉山": [
+            "meishan",
+            "http://www.tianqihoubao.com/lishi/meishan.html"
+        ],
+        "宜宾": [
+            "yibin",
+            "http://www.tianqihoubao.com/lishi/yibin.html"
+        ],
+        "广安": [
+            "guangan",
+            "http://www.tianqihoubao.com/lishi/guangan.html"
+        ],
+        "达州": [
+            "dazhou",
+            "http://www.tianqihoubao.com/lishi/dazhou.html"
+        ],
+        "雅安": [
+            "yaan",
+            "http://www.tianqihoubao.com/lishi/yaan.html"
+        ],
+        "巴中": [
+            "bazhong",
+            "http://www.tianqihoubao.com/lishi/bazhong.html"
+        ],
+        "资阳": [
+            "ziyang",
+            "http://www.tianqihoubao.com/lishi/ziyang.html"
+        ],
+        "阿坝": [
+            "aba",
+            "http://www.tianqihoubao.com/lishi/aba.html"
+        ],
+        "甘孜": [
+            "ganzi",
+            "http://www.tianqihoubao.com/lishi/ganzi.html"
+        ],
+        "凉山": [
+            "liangshan",
+            "http://www.tianqihoubao.com/lishi/liangshan.html"
+        ]
+    },
+    "贵州": {
+        "贵阳": [
+            "guiyang",
+            "http://www.tianqihoubao.com/lishi/guiyang.html"
+        ],
+        "六盘水": [
+            "liupanshui",
+            "http://www.tianqihoubao.com/lishi/liupanshui.html"
+        ],
+        "遵义": [
+            "zunyi",
+            "http://www.tianqihoubao.com/lishi/zunyi.html"
+        ],
+        "安顺": [
+            "anshun",
+            "http://www.tianqihoubao.com/lishi/anshun.html"
+        ],
+        "铜仁": [
+            "tongren",
+            "http://www.tianqihoubao.com/lishi/tongren.html"
+        ],
+        "黔西南": [
+            "qianxinan",
+            "http://www.tianqihoubao.com/lishi/qianxinan.html"
+        ],
+        "毕节": [
+            "bijie",
+            "http://www.tianqihoubao.com/lishi/bijie.html"
+        ],
+        "黔东南": [
+            "qiandongnan",
+            "http://www.tianqihoubao.com/lishi/qiandongnan.html"
+        ],
+        "黔南": [
+            "qiannan",
+            "http://www.tianqihoubao.com/lishi/qiannan.html"
+        ]
+    },
+    "云南": {
+        "昆明": [
+            "kunming",
+            "http://www.tianqihoubao.com/lishi/kunming.html"
+        ],
+        "曲靖": [
+            "qujing",
+            "http://www.tianqihoubao.com/lishi/qujing.html"
+        ],
+        "玉溪": [
+            "yuxi",
+            "http://www.tianqihoubao.com/lishi/yuxi.html"
+        ],
+        "保山": [
+            "baoshan",
+            "http://www.tianqihoubao.com/lishi/baoshan.html"
+        ],
+        "昭通": [
+            "zhaotong",
+            "http://www.tianqihoubao.com/lishi/zhaotong.html"
+        ],
+        "丽江": [
+            "lijiang",
+            "http://www.tianqihoubao.com/lishi/lijiang.html"
+        ],
+        "普洱": [
+            "puer",
+            "http://www.tianqihoubao.com/lishi/puer.html"
+        ],
+        "临沧": [
+            "lincang",
+            "http://www.tianqihoubao.com/lishi/lincang.html"
+        ],
+        "楚雄": [
+            "chuxiong",
+            "http://www.tianqihoubao.com/lishi/chuxiong.html"
+        ],
+        "红河": [
+            "honghe",
+            "http://www.tianqihoubao.com/lishi/honghe.html"
+        ],
+        "文山": [
+            "wenshan",
+            "http://www.tianqihoubao.com/lishi/wenshan.html"
+        ],
+        "西双版纳": [
+            "xishuangbanna",
+            "http://www.tianqihoubao.com/lishi/xishuangbanna.html"
+        ],
+        "大理": [
+            "dali",
+            "http://www.tianqihoubao.com/lishi/dali.html"
+        ],
+        "德宏": [
+            "dehong",
+            "http://www.tianqihoubao.com/lishi/dehong.html"
+        ],
+        "怒江": [
+            "nujiang",
+            "http://www.tianqihoubao.com/lishi/nujiang.html"
+        ],
+        "迪庆": [
+            "diqing",
+            "http://www.tianqihoubao.com/lishi/diqing.html"
+        ]
+    },
+    "西藏": {
+        "拉萨": [
+            "lasa",
+            "http://www.tianqihoubao.com/lishi/lasa.html"
+        ],
+        "昌都": [
+            "changdu",
+            "http://www.tianqihoubao.com/lishi/changdu.html"
+        ],
+        "山南": [
+            "shannan",
+            "http://www.tianqihoubao.com/lishi/shannan.html"
+        ],
+        "日喀则": [
+            "rikaze",
+            "http://www.tianqihoubao.com/lishi/rikaze.html"
+        ],
+        "那曲": [
+            "naqu",
+            "http://www.tianqihoubao.com/lishi/naqu.html"
+        ],
+        "阿里": [
+            "ali",
+            "http://www.tianqihoubao.com/lishi/ali.html"
+        ],
+        "林芝": [
+            "linzhi",
+            "http://www.tianqihoubao.com/lishi/linzhi.html"
+        ]
+    },
+    "陕西": {
+        "西安": [
+            "xian",
+            "http://www.tianqihoubao.com/lishi/xian.html"
+        ],
+        "铜川": [
+            "tongchuan",
+            "http://www.tianqihoubao.com/lishi/tongchuan.html"
+        ],
+        "宝鸡": [
+            "baoji",
+            "http://www.tianqihoubao.com/lishi/baoji.html"
+        ],
+        "咸阳": [
+            "xianyang",
+            "http://www.tianqihoubao.com/lishi/xianyang.html"
+        ],
+        "渭南": [
+            "weinan",
+            "http://www.tianqihoubao.com/lishi/weinan.html"
+        ],
+        "延安": [
+            "yanan",
+            "http://www.tianqihoubao.com/lishi/yanan.html"
+        ],
+        "汉中": [
+            "hanzhong",
+            "http://www.tianqihoubao.com/lishi/hanzhong.html"
+        ],
+        "榆林": [
+            "yulin",
+            "http://www.tianqihoubao.com/lishi/yulin.html"
+        ],
+        "安康": [
+            "ankang",
+            "http://www.tianqihoubao.com/lishi/ankang.html"
+        ],
+        "商洛": [
+            "shanglv",
+            "http://www.tianqihoubao.com/lishi/shanglv.html"
+        ]
+    },
+    "甘肃": {
+        "兰州": [
+            "lanzhou",
+            "http://www.tianqihoubao.com/lishi/lanzhou.html"
+        ],
+        "嘉峪关": [
+            "jiayuguan",
+            "http://www.tianqihoubao.com/lishi/jiayuguan.html"
+        ],
+        "金昌": [
+            "jinchang",
+            "http://www.tianqihoubao.com/lishi/jinchang.html"
+        ],
+        "白银": [
+            "baiyin",
+            "http://www.tianqihoubao.com/lishi/baiyin.html"
+        ],
+        "天水": [
+            "tianshui",
+            "http://www.tianqihoubao.com/lishi/tianshui.html"
+        ],
+        "武威": [
+            "wuwei",
+            "http://www.tianqihoubao.com/lishi/wuwei.html"
+        ],
+        "张掖": [
+            "zhangye",
+            "http://www.tianqihoubao.com/lishi/zhangye.html"
+        ],
+        "平凉": [
+            "pingliang",
+            "http://www.tianqihoubao.com/lishi/pingliang.html"
+        ],
+        "酒泉": [
+            "jiuquan",
+            "http://www.tianqihoubao.com/lishi/jiuquan.html"
+        ],
+        "庆阳": [
+            "gsqingyang",
+            "http://www.tianqihoubao.com/lishi/gsqingyang.html"
+        ],
+        "定西": [
+            "dingxi",
+            "http://www.tianqihoubao.com/lishi/dingxi.html"
+        ],
+        "陇南": [
+            "longnan",
+            "http://www.tianqihoubao.com/lishi/longnan.html"
+        ],
+        "临夏": [
+            "linxia",
+            "http://www.tianqihoubao.com/lishi/linxia.html"
+        ],
+        "甘南": [
+            "gannan",
+            "http://www.tianqihoubao.com/lishi/gannan.html"
+        ]
+    },
+    "青海": {
+        "西宁": [
+            "xining",
+            "http://www.tianqihoubao.com/lishi/xining.html"
+        ],
+        "海东": [
+            "haidong",
+            "http://www.tianqihoubao.com/lishi/haidong.html"
+        ],
+        "海北": [
+            "haibei",
+            "http://www.tianqihoubao.com/lishi/haibei.html"
+        ],
+        "黄南": [
+            "huangnan",
+            "http://www.tianqihoubao.com/lishi/huangnan.html"
+        ],
+        "海南": [
+            "hainan",
+            "http://www.tianqihoubao.com/lishi/hainan.html"
+        ],
+        "果洛": [
+            "guolv",
+            "http://www.tianqihoubao.com/lishi/guolv.html"
+        ],
+        "玉树": [
+            "yushu",
+            "http://www.tianqihoubao.com/lishi/yushu.html"
+        ],
+        "海西": [
+            "haixi",
+            "http://www.tianqihoubao.com/lishi/haixi.html"
+        ]
+    },
+    "宁夏": {
+        "银川": [
+            "yinchuan",
+            "http://www.tianqihoubao.com/lishi/yinchuan.html"
+        ],
+        "石嘴山": [
+            "shizuishan",
+            "http://www.tianqihoubao.com/lishi/shizuishan.html"
+        ],
+        "吴忠": [
+            "wuzhong",
+            "http://www.tianqihoubao.com/lishi/wuzhong.html"
+        ],
+        "固原": [
+            "nxguyuan",
+            "http://www.tianqihoubao.com/lishi/nxguyuan.html"
+        ],
+        "中卫": [
+            "zhongwei",
+            "http://www.tianqihoubao.com/lishi/zhongwei.html"
+        ]
+    },
+    "新疆": {
+        "乌鲁木齐": [
+            "wulumuqi",
+            "http://www.tianqihoubao.com/lishi/wulumuqi.html"
+        ],
+        "克拉玛依": [
+            "kelamayi",
+            "http://www.tianqihoubao.com/lishi/kelamayi.html"
+        ],
+        "吐鲁番": [
+            "tulufan",
+            "http://www.tianqihoubao.com/lishi/tulufan.html"
+        ],
+        "哈密": [
+            "hami",
+            "http://www.tianqihoubao.com/lishi/hami.html"
+        ],
+        "昌吉": [
+            "changji",
+            "http://www.tianqihoubao.com/lishi/changji.html"
+        ],
+        "博州": [
+            "xjbozhou",
+            "http://www.tianqihoubao.com/lishi/xjbozhou.html"
+        ],
+        "巴州": [
+            "xjbazhou",
+            "http://www.tianqihoubao.com/lishi/xjbazhou.html"
+        ],
+        "阿克苏": [
+            "akesu",
+            "http://www.tianqihoubao.com/lishi/akesu.html"
+        ],
+        "克州": [
+            "kezhou",
+            "http://www.tianqihoubao.com/lishi/kezhou.html"
+        ],
+        "喀什": [
+            "kashi",
+            "http://www.tianqihoubao.com/lishi/kashi.html"
+        ],
+        "和田": [
+            "hetian",
+            "http://www.tianqihoubao.com/lishi/hetian.html"
+        ],
+        "伊犁": [
+            "yili",
+            "http://www.tianqihoubao.com/lishi/yili.html"
+        ],
+        "塔城": [
+            "tacheng",
+            "http://www.tianqihoubao.com/lishi/tacheng.html"
+        ],
+        "阿勒泰": [
+            "aletai",
+            "http://www.tianqihoubao.com/lishi/aletai.html"
+        ],
+        "石河子": [
+            "shihezi",
+            "http://www.tianqihoubao.com/lishi/shihezi.html"
+        ],
+        "五家渠": [
+            "wujiaqu",
+            "http://www.tianqihoubao.com/lishi/wujiaqu.html"
+        ]
+    },
+    "台湾": {
+        "台北": [
+            "taibei",
+            "http://www.tianqihoubao.com/lishi/taibei.html"
+        ],
+        "台中": [
+            "taizhong",
+            "http://www.tianqihoubao.com/lishi/taizhong.html"
+        ],
+        "高雄": [
+            "gaoxiong",
+            "http://www.tianqihoubao.com/lishi/gaoxiong.html"
+        ]
+    },
+    "香港": {
+        "香港": [
+            "xianggang",
+            "http://www.tianqihoubao.com/lishi/xianggang.html"
+        ]
+    },
+    "澳门": {
+        "澳门": [
+            "aomen",
+            "http://www.tianqihoubao.com/lishi/aomen.html"
+        ]
+    }
+}

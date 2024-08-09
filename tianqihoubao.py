@@ -1,13 +1,14 @@
 import io
+import json
 import os
 import queue
 import sys
 import threading
 import pandas as pd
 import pickle
-from get_city import get_city
+import requests
+from bs4 import BeautifulSoup
 from fake_user_agent import get_fake_user_agent
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='gbk')  # 改变标准输出的默认编码, 防止控制台打印乱码
 from datetime import datetime
 from config import AREAS,TIME_OUT,DOWNLOAD_NUMBER,SAVE_NUMBER,IS_OVER
 import DrissionPage
@@ -20,6 +21,21 @@ starttime = datetime.now()
 # 设置日志记录器
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+import requests
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
+
+# 创建一个适配器并设置更大的连接池大小
+adapter = HTTPAdapter(
+    pool_connections=50,  # 最大连接数
+    pool_maxsize=50,      # 最大连接池大小
+    max_retries=Retry(total=3, backoff_factor=0.1)  # 设置重试机制
+)
+
+# 创建一个会话并挂载适配器
+session = requests.Session()
+session.mount('http://', adapter)
+session.mount('https://', adapter)
 def DealsaveTocsv(df, fileName):
      '''
      将天气数据保存至csv文件
@@ -44,11 +60,43 @@ def DealsaveTocsv(df, fileName):
 
      df.to_csv(fileName, index=False, encoding='gbk')
 
-     logger.info('Save all weather success!')
+     # logger.info('Save all weather success!')
+def get_city():
+    """
+    从天气网站获取城市列表，并将其整理成字典形式。
 
+    Returns:
+        dict: 包含省份及其城市的字典。
+    """
+    url = 'http://www.tianqihoubao.com/lishi/'
+    while True:
+        try:
+            # 发送 HTTP 请求获取网页内容
+            page.get(url, timeout=TIME_OUT)
+            # 解析网页内容
+            city_list = page.ele('xpath=//div[@class="citychk"]').eles('xpath=//dl')
+            citydic = {}
+            for dl in city_list:
+                province_text = dl.ele('xpath=//dt').text
+                dd = dl.ele('xpath=//dd').eles('xpath=//a')
+                wherelist = {}
+                for a in dd:
+                    name = a.text
+                    href = a.href
+                    url = href.split('/')[-1].split('.')[0]
+                    wherelist[name] = [url, href]
+                    citydic[province_text] = wherelist
+
+            return citydic
+
+        except requests.RequestException as e:
+            logger.error(f'HTTP 请求错误: {e}')
+        except Exception as e:
+            logger.error(f'解析错误: {e}')
 
 def get_data(city,year,month):
-    url = f'http://www.tianqihoubao.com{city}/month{year}{month}.html'
+    url = f'http://www.tianqihoubao.com/lishi/{city}/month/{year}{month}.html'
+    # logger.info(f'开始爬取{url}')
     while True:
         try:
             page.get(url,timeout=TIME_OUT, headers={'User-Agent': get_fake_user_agent('pc')})
@@ -65,42 +113,54 @@ def get_data(city,year,month):
             result_weather = pd.DataFrame(data_values, columns=columns)
             return result_weather
         except Exception as e:
-            logger.error(f'解析或数据处理错误: {e}')
-def do_craw(parsequeue: queue.Queue,urlqueue:queue.Queue):
+            logger.error(f'解析或数据处理错误: {e},错误网址为{url}',)
+def do_craw(urlqueue:queue.Queue,parsequeue: queue.Queue):
     while True:
-        url,month,year,filename = urlqueue.get()
+        # logger.info(f'进程{threading.current_thread().name}开始')
+        url,year,month,filename = urlqueue.get()
+        # logger.info(f'进程{threading.current_thread().name}开始获得{url,month,year,filename}')
         data=get_data(url,month,year)
         parsequeue.put((data,filename))
-        print(threading.current_thread().name, '爬取成功', url, f'crwal size:{urlqueue.qsize()}')
+        logger.info(f'{threading.current_thread().name}爬取成功{url}crwal size:{urlqueue.qsize()}')
         if urlqueue.qsize() == 0:
             end_time=datetime.now()
-            print('urlqueue为空，关闭线程,用时',end_time-starttime)
+            logger.info(f'urlqueue为空，关闭线程,用时{end_time-starttime}')
             return
-def do_save(parsequeue: queue.Queue):
+def do_save(parsequeue: queue.Queue,urlqueue:queue.Queue):
     while True:
         data,filename = parsequeue.get()
         DealsaveTocsv(data,filename)
-        print(threading.current_thread().name, '保存成功', file, f'save size:{parsequeue.qsize()}')
-
+        logger.info( f'{threading.current_thread().name} 保存成功{file} save size:{parsequeue.qsize()}')
+        if parsequeue.qsize() == 0 and urlqueue.qsize() == 0:
+            end_time=datetime.now()
+            logger.info(f'urlqueue与parsequeue为空，关闭线程,用时{end_time-starttime}',)
+            return
 if __name__ == '__main__':
     year_list = list(range(2011, now_year + 1))
     month_list = list(range(1, 13))
     urlqueue = queue.Queue()
     parsequeue = queue.Queue()
+    # citydic = get_city()
+    if not os.path.exists('citydata.json'):
+        citydic = get_city()
+        json_string = json.dumps(citydic, indent=4)
+        with open('citydata.json', 'w', encoding='utf-8') as file:
+            json.dump(citydic, file, ensure_ascii=False, indent=4)
     # 读取变量
-    if not os.path.exists('citydata.pkl'):
-        get_city()
-    with open('citydata.pkl', 'rb') as file:
-        citydic = pickle.load(file)
-    logger.info(f'城市列表读取成功{citydic}')
+    else:
+        logger.info('citydata.json exists')
+        with open('citydata.json', 'r',encoding='utf-8') as file:
+            citydic = json.load(file)
+    # logger.info(f'城市列表读取成功{citydic}')
     for area in AREAS:
         filedic = area + '/'
         if not os.path.exists(filedic):
             os.makedirs(filedic)
-        for city,url in citydic[area].items():
+        for city,[url,realurl] in citydic[area].items():
             filename= filedic+city+'/'
             if not os.path.exists(filename) or IS_OVER:
-                os.makedirs(filename)
+                if not os.path.exists(filename):
+                    os.makedirs(filename)
                 for year in year_list:
                      for month in month_list:
                          if year == now_year and month > now_month:
@@ -108,13 +168,17 @@ if __name__ == '__main__':
                          month = str(month).zfill(2)
                          name= filename+f'{year}{month}.csv'
                          urlqueue.put((url,month,year,name))
+                         # logger.info(f'添加url:{(url,month,year,name)}到队列')
+
             else:
                 logger.info(f'{filename}exists')
+
+    # print('开始爬取',urlqueue)
     for idx in range(DOWNLOAD_NUMBER):
         t = Thread(target=do_craw, args=(urlqueue, parsequeue), name=f'爬取线程{idx}')
         t.start()
     for idx in range(SAVE_NUMBER):
-        t = Thread(target=do_save, args=(parsequeue,), name=f'保存线程{idx}')
+        t = Thread(target=do_save, args=(parsequeue,urlqueue), name=f'保存线程{idx}')
         t.start()
     endtime= datetime.now()
     logger.info('All Done,time is %s' % (endtime - starttime))
