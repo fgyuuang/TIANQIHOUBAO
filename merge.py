@@ -68,6 +68,10 @@ def merge_and_sort_csv_files(folder_path):
             combined_df.to_csv(output_path, index=False)
             print(f"合并并排序后的 CSV 文件已保存为 '{output_path}'")
 
-# 使用示例
-parent_folder = 'C:\code\Python Project\文本分析\旅游数据\TIANQIHOUBAO\海南'
-merge_and_sort_csv_files(parent_folder)
+
+parent_folder = os.getcwd()
+for subfolder_name in os.listdir(parent_folder):
+    subfolder_path = os.path.join(parent_folder, subfolder_name)
+    # 检查是否是目录
+    if os.path.isdir(subfolder_path):
+        merge_and_sort_csv_files(parent_folder)

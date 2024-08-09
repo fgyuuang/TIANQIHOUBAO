@@ -21,13 +21,14 @@ cd TIANQIHOUBAO
 ```bash
 pip install -r requirements.txt
 ```
-#### 5.修改配置文件
+#### 4.修改配置文件
 AREAS修改为你需要爬取的省份。
-#### 4.运行 `get_city.py`得到 {省份：{城市：url}}字典
-```bash
-python get_city.py
-```
+
 #### 5.运行 `tianqihoubao.py`得到天气数据
 ```bash
 python tianqihoubao.py
+```
+#### 6.运行 `merge.py`合并数据
+```bash
+python merge.py
 ```
